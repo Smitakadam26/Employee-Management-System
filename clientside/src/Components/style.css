@@ -1,0 +1,46 @@
+.loginPage {
+    background: url('https://www.devteam.space/wp-content/uploads/2021/11/Employee-Management-Software.jpg');
+    background: linear-gradient(rgba(11, 11, 11, 0.5), rgba(10, 10, 10, 0.5)), url("https://www.devteam.space/wp-content/uploads/2021/11/Employee-Management-Software.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+}
+.loginPage button{
+    color:white;
+    background-color: rgba(3, 33, 93, 0.765);
+}
+.loginPage button:hover{
+    color:white;
+    background-color: rgba(2, 20, 57, 0.996);
+}
+.loginForm {
+    background-color: white;
+    color: rgb(2, 32, 93);
+    display: inline;
+}
+
+ul li :hover {
+    background-color: gray;
+}
+.admindetails{
+    padding:50px;
+   margin:50px;
+   font-size: 30px;
+}
+.button{
+   width:20px;
+}
+.home{
+    margin-left: 200px;
+}
+.employee_image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.emp_det_image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
