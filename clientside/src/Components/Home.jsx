@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React, {useEffect, useState } from 'react'
-import {Link} from 'react';
+import './style.css';
 
 const Home = () => {
   const [adminTotal, setAdminTotal] = useState(0)
@@ -63,8 +63,8 @@ const Home = () => {
   } 
   return (
     <div>
-      <div className='p-5 justify-content-around mt-3 home'>
-        <div className='px-3 pt-5 pb-3 border shadow-sm w-50 mb-5'>
+      <div className='justify-content-around mt-3 home'>
+        <div className='px-3 pt-5 pb-3 border shadow-sm w-50 mb-5 box'>
           <div className='text-center pb-1'>
             <h4>Admin</h4>
           </div>
@@ -74,7 +74,7 @@ const Home = () => {
             <h5>{adminTotal}</h5>
           </div>
         </div>
-        <div className='px-3 pt-2 pb-3 border shadow-sm w-50 mb-5'>
+        <div className='px-3 pt-2 pb-3 border shadow-sm w-50 mb-5 box'>
           <div className='text-center pb-1'>
             <h4>Employee</h4>
           </div>
@@ -84,7 +84,7 @@ const Home = () => {
             <h5>{employeeTotal}</h5>
           </div>
         </div>
-        <div className='px-3 pt-2 pb-3 border shadow-sm w-50 mb-5'>
+        <div className='px-3 pt-2 pb-3 border shadow-sm w-50 mb-5 box'>
           <div className='text-center pb-1'>
             <h4>Salary</h4>
           </div>
