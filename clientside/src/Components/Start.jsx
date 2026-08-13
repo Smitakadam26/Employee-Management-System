@@ -8,7 +8,7 @@ const Start = () => {
     const navigate = useNavigate()
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios.get('http://localhost:3000/verify')
+    axios.get('https://employee-management-system-tawny-nine.vercel.app/verify')
     .then(result => {
       if(result.data.Status) {
         if(result.data.role === "admin") {

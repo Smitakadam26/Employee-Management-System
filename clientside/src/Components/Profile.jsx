@@ -11,7 +11,7 @@ const Profile = () => {
     AdminRecords();
   }, [])
   const AdminRecords = () => {
-    axios.get('http://localhost:3000/auth/admin_records')
+    axios.get('https://employee-management-system-tawny-nine.vercel.app/auth/admin_records')
     .then(result => {
       if(result.data.Status) {
         setAdmins(result.data.Result)
@@ -22,7 +22,7 @@ const Profile = () => {
   }
   axios.defaults.withCredentials = true
   const handleLogout = () => {
-    axios.get('http://localhost:3000/auth/logout')
+    axios.get('https://employee-management-system-tawny-nine.vercel.app/auth/logout')
     .then(result => {
       if(result.data.Status) { 
         localStorage.removeItem("valid")

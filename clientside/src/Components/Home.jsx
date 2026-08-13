@@ -16,7 +16,7 @@ const Home = () => {
   }, [])
 
   const AdminRecords = () => {
-    axios.get('http://localhost:3000/auth/admin_records')
+    axios.get('https://employee-management-system-tawny-nine.vercel.app/auth/admin_records')
     .then(result => {
       if(result.data.Status) {
         setAdmins(result.data.Result)
@@ -26,7 +26,7 @@ const Home = () => {
     })
   }
   const adminCount = () => {
-    axios.get('http://localhost:3000/auth/admin_count')
+    axios.get('https://employee-management-system-tawny-nine.vercel.app/auth/admin_count')
     .then(result => {
       if(result.data.Status) {
         setAdminTotal(result.data.Result[0].admin)
@@ -34,7 +34,7 @@ const Home = () => {
     })
   }
   const employeeCount = () => {
-    axios.get('http://localhost:3000/auth/employee_count')
+    axios.get('https://employee-management-system-tawny-nine.vercel.app/auth/employee_count')
     .then(result => {
       if(result.data.Status) {
         setemployeeTotal(result.data.Result[0].employee)
@@ -42,7 +42,7 @@ const Home = () => {
     })
   }
   const salaryCount = () => {
-    axios.get('http://localhost:3000/auth/salary_count')
+    axios.get('https://employee-management-system-tawny-nine.vercel.app/auth/salary_count')
     .then(result => {
       if(result.data.Status) {
         setSalaryTotal(result.data.Result[0].salaryOFEmp)
@@ -52,7 +52,7 @@ const Home = () => {
     })
   }
   const handleDelete = (id) => {
-    axios.delete('http://localhost:3000/auth/delete_admin/'+id)
+    axios.delete('https://employee-management-system-tawny-nine.vercel.app/auth/delete_admin/'+id)
     .then(result => {
         if(result.data.Status) {
             window.location.reload()

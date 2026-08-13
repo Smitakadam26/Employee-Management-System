@@ -6,7 +6,7 @@ const Category = () => {
   const [category, setCategory] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/auth/category')
+    axios.get('https://employee-management-system-tawny-nine.vercel.app/auth/category')
       .then(result => {
         if (result.data.Status) {
           setCategory(result.data.Result);

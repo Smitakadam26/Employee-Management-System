@@ -12,7 +12,7 @@ npm  install
 Initialize the database tables by running:
 npm run 
 
-This will start the Node.js server, and you can access the application in your web browser by visiting http://localhost:3000.
+This will start the Node.js server, and you can access the application in your web browser by visiting https://employee-management-system-tawny-nine.vercel.app.
 
 
 
