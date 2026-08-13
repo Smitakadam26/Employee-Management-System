@@ -35,7 +35,7 @@ const EmployeeDetail = () => {
                 <h3>Email: {employee.email}</h3>
                 
                 <h3>Address:{employee.address}</h3>
-                <h3>Salary: ${employee.salary}</h3>
+                <h3>Salary: {employee.salary}</h3>
             </div>
             <div>
             <Link

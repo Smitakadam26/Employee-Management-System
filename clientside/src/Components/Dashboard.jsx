@@ -1,4 +1,5 @@
 import React from "react";
+import './style.css';
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import axios from "axios";
@@ -82,7 +83,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="col p-0 m-0">
-            <div className="p-2 d-flex justify-content-center shadow">
+            <div className="d-flex justify-content-center shadow">
                 <h4>Emoployee Management System</h4>
             </div>
             <Outlet />

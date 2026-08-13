@@ -123,7 +123,7 @@ const AddEmployee = () => {
             <select
               name="category"
               id="category"
-              className="form-select"
+              className="form-select "
               onChange={(e) => setEmployee({ ...employee, category_id: e.target.value })}
             >
               {category.map((c) => (
