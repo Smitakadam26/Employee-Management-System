@@ -10,7 +10,7 @@ const router = express.Router();
 router.post("/adminlogin", (req, res) => {
   const sql = "SELECT * from admin Where email = ? and password = ?";
   con.query(sql, [req.body.email, req.body.password], (err, result) => {
-    if (err) return res.json({ loginStatus: false, Error: "Query error" });
+    if (err) return res.json({ loginStatus: false, Error: err });
     if (result.length > 0) {
       const email = result[0].email;
       const token = jwt.sign(
@@ -51,6 +51,7 @@ const storage = multer.diskStorage({
         cb(null, file.fieldname + "_" + Date.now() + path.extname(file.originalname))
     }
 })
+
 const upload = multer({
     storage: storage
 })
@@ -81,6 +82,7 @@ router.post('/add_employee', upload.single('image'), (req, res) => {
       });
     });
 })  
+
 router.get('/employee', (req, res) => {
     const sql = `SELECT e.id, e.name, e.email, e.address, e.salary, e.image, e.category_id, c.name AS category_name
     FROM employees e 
@@ -126,6 +128,7 @@ router.delete('/delete_employee/:id', (req, res) => {
         return res.json({Status: true, Result: result})
     })
 })
+
 router.delete('/delete_admin/:id', (req, res) => {
     const id = req.params.id;
     const sql = "delete from admin where id = ?"
